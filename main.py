@@ -1,11 +1,7 @@
-eight_system = input("Введите число в восьмеричной системе (5 цифр): ")    
-ten_system = 0  
-if len(eight_system)==5:
-    for i in range(5):
-        number = int(eight_system[i])  
-        ten_system += number * (8 ** (4 - i))
-    print("Число в десятичной системе:", ten_system)
-elif len(eight_system)<5:
-     print("Вы ввели менее 5 мимволов")
-else:
-    print("Вы ввели более 5 мимволов")
+eight_system = input("Введите число в восьмеричной системе (5 цифр): ")
+ten_system = (int(eight_system[0]) * 8**4 +
+int(eight_system[1]) * 8**3 +
+int(eight_system[2]) * 8**2 +
+int(eight_system[3]) * 8**1 +
+int(eight_system[4]) * 8**0)
+print("Число в десятичной системе:", ten_system)
